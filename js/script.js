@@ -1,6 +1,6 @@
 const toDoList = new Vue ({
     el: '#root',
-    data:{
+    data: {
         tasks: [
             {
                 text: 'Fare benzina',
@@ -19,6 +19,11 @@ const toDoList = new Vue ({
                 done: false,
             },
         ]
+    },
+    methods: {
+        removeTask(index){
+            this.tasks.splice(index, 1);
+        }
     }
 });
 
