@@ -10,7 +10,17 @@
     <title>Todolist</title>
 </head>
 <body>
-    
+    <div class="container mt-5" id="root">
+        <div class="row">
+            <div class="col">
+                <ul class="list-group">
+                    <li v-for="(task, done) in tasks" :class="{'text-decoration-line-through' : task.done === true}" class="list-group-item">{{ task.text }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </div>
 
     <script src="js/script.js"></script>
 </body>
