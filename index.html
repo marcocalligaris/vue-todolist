@@ -13,6 +13,12 @@
     <div class="container mt-5" id="root">
         <div class="row">
             <div class="col">
+
+                <div class="input-group mb-3">
+                    <input v-model="newTask" type="text" class="form-control" placeholder="Digita qui il nuovo task">
+                    <button @click="addNewTask" type="button" class="btn btn-success">Aggiungi</button>
+                </div>
+
                 <ul class="list-group">
                     <li v-for="(task, done, i) in tasks" :class="{'text-decoration-line-through' : task.done === true}" class="d-flex justify-content-between list-group-item">{{ task.text }} <button type="button" class="btn-close" @click="removeTask(i)"></button></li>
                 </ul>
